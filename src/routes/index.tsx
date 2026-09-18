@@ -233,6 +233,31 @@ function SitePage() {
     return () => observer.disconnect();
   }, [intro]);
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const layers = Array.from(document.querySelectorAll<HTMLElement>(".parallax-slow, .parallax-medium"));
+    let frame = 0;
+    const update = () => {
+      const viewportMiddle = window.innerHeight / 2;
+      layers.forEach((layer) => {
+        const bounds = layer.getBoundingClientRect();
+        const distance = bounds.top + bounds.height / 2 - viewportMiddle;
+        const strength = layer.classList.contains("parallax-medium") ? -0.045 : -0.025;
+        layer.style.transform = `translate3d(0, ${distance * strength}px, 0)`;
+      });
+      frame = 0;
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [intro]);
+
   return (
     <>
       {intro && <Intro onDone={() => setIntro(false)} />}

@@ -168,6 +168,7 @@ img { display: block; max-width: 100%; }
 
 .image-band { min-height: 720px; display: grid; grid-template-columns: 1.05fr .95fr; color: white; background: var(--navy); overflow: hidden; }
 .image-band-photo { min-height: 600px; background-position: center; background-size: cover; }
+.parallax-slow, .parallax-medium { will-change: transform; }
 .image-band-content { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: clamp(50px,7vw,110px); background: linear-gradient(135deg,var(--navy),var(--navy-soft)); }
 .image-band-content > p { max-width: 600px; color: color-mix(in oklab, white 72%, transparent); line-height: 1.65; }
 .risk-list { width: 100%; margin: 24px 0 34px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; }
