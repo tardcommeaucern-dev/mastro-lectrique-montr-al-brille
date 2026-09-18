@@ -20,6 +20,7 @@ import {
   Star,
   X,
   Zap,
+  type LucideIcon,
 } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
@@ -102,6 +103,13 @@ const municipalities = [
   "Châteauguay", "Beauharnois", "Secteurs environnants",
 ];
 
+const spotlights: Array<[string, string, LucideIcon]> = [
+  ["Saint-Bruno", "Résidentiel et commercial", HousePlug],
+  ["Candiac", "Interventions rapides", Gauge],
+  ["Brossard", "Projets et dépannages", Building2],
+  ["Préparation hivernale", "Génératrices et inspections", Snowflake],
+];
+
 function ElectricCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -139,7 +147,7 @@ function ElectricCanvas() {
         context.beginPath(); context.moveTo(0, y); context.lineTo(width, y); context.stroke();
       }
       const phase = reduced ? 0.5 : (time / 1400) % 1;
-      const points = [
+      const points: Array<[number, number]> = [
         [0, height * 0.72], [width * 0.16, height * 0.72], [width * 0.16, height * 0.32],
         [width * 0.43, height * 0.32], [width * 0.43, height * 0.6], [width * 0.72, height * 0.6],
         [width * 0.72, height * 0.22], [width, height * 0.22],
@@ -378,12 +386,7 @@ function SitePage() {
           <section className="section areas-section" id="secteurs">
             <div className="section-heading reveal"><span className="eyebrow">À votre service, près de chez vous</span><h2>Montréal, Rive-Sud et <span>municipalités voisines</span></h2></div>
             <div className="spotlight-grid">
-              {[
-                ["Saint-Bruno", "Résidentiel et commercial", HousePlug],
-                ["Candiac", "Interventions rapides", Gauge],
-                ["Brossard", "Projets et dépannages", Building2],
-                ["Préparation hivernale", "Génératrices et inspections", Snowflake],
-              ].map(([place, text, Icon]) => <article className="spotlight-card reveal" key={String(place)}><Icon /><span>{String(text)}</span><h3>{String(place)}</h3></article>)}
+              {spotlights.map(([place, text, Icon]) => <article className="spotlight-card reveal" key={place}><Icon /><span>{text}</span><h3>{place}</h3></article>)}
             </div>
             <div className="municipality-grid reveal">{municipalities.map((place) => <span key={place}><MapPin size={15} /> {place}</span>)}</div>
           </section>
