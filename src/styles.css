@@ -101,8 +101,8 @@ img { display: block; max-width: 100%; }
 .hero { position: relative; min-height: min(940px,100svh); display: grid; align-items: center; padding: 135px clamp(20px,5vw,90px) 68px; color: white; background: var(--navy); }
 .hero-video, .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-video { object-fit: cover; }
-.hero-overlay { background: linear-gradient(90deg, color-mix(in oklab, var(--navy) 96%, transparent) 0%, color-mix(in oklab, var(--navy) 80%, transparent) 46%, color-mix(in oklab, var(--navy) 50%, transparent) 100%), linear-gradient(0deg, color-mix(in oklab, var(--navy) 68%, transparent), transparent 50%); }
-.hero-grid { position: relative; z-index: 2; width: min(1400px,100%); margin: auto; display: grid; grid-template-columns: minmax(0,1.15fr) minmax(350px, .72fr); align-items: center; gap: clamp(45px,6vw,100px); }
+.hero-overlay { background: linear-gradient(90deg, color-mix(in oklab, var(--navy) 48%, transparent) 0%, color-mix(in oklab, var(--navy) 40%, transparent) 46%, color-mix(in oklab, var(--navy) 25%, transparent) 100%), linear-gradient(0deg, color-mix(in oklab, var(--navy) 34%, transparent), transparent 50%); }
+.hero-grid { position: relative; z-index: 2; width: min(1400px,100%); margin: auto; display: grid; grid-template-columns: minmax(0,1fr); align-items: center; }
 .hero-copy { max-width: 760px; animation: hero-copy .8s .2s ease both; }
 .hero-kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px; padding: 8px 13px; border-left: 2px solid var(--electric-bright); background: color-mix(in oklab, var(--navy) 55%, transparent); font-size: .78rem; font-weight: 800; text-transform: uppercase; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--electric-bright); box-shadow: 0 0 0 5px color-mix(in oklab, var(--electric-bright) 15%, transparent); }
@@ -226,9 +226,11 @@ img { display: block; max-width: 100%; }
 .review-featured footer span { color: color-mix(in oklab, white 65%, transparent); }
 .rating-number { font-family: var(--font-display); font-size: 4.5rem; font-weight: 800; color: var(--primary); line-height: .9; }
 
-.final-cta { padding: clamp(65px,8vw,110px) clamp(20px,7vw,110px); display: grid; grid-template-columns: minmax(0,1.3fr) minmax(300px,.7fr); gap: 60px; align-items: center; color: white; background: var(--primary); }
+.final-cta { padding: clamp(65px,8vw,110px) clamp(20px,7vw,110px); display: grid; grid-template-columns: minmax(0,.85fr) minmax(390px,.65fr); gap: clamp(45px,7vw,100px); align-items: center; color: white; background: var(--primary); }
+.final-cta-details { display: grid; gap: 38px; }
 .final-cta-copy p { max-width: 680px; color: color-mix(in oklab, white 76%, transparent); }
 .final-cta-copy > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.final-quote .quote-form { animation: none; }
 .emergency-card { padding: 35px; display: flex; flex-direction: column; border: 1px solid color-mix(in oklab, white 30%, transparent); background: color-mix(in oklab, var(--navy) 36%, transparent); }
 .emergency-card span { color: var(--electric-bright); font-size: .75rem; font-weight: 900; text-transform: uppercase; }
 .emergency-card strong { margin: 8px 0 25px; font-family: var(--font-display); font-size: 2rem; line-height: 1; text-transform: uppercase; }
@@ -271,7 +273,7 @@ img { display: block; max-width: 100%; }
   .site-header { grid-template-columns: 200px 1fr auto; }
   .nav-links { gap: 16px; font-size: .78rem; }
   .emergency-link { display: none; }
-  .hero-grid { grid-template-columns: minmax(0,1fr) minmax(330px,.75fr); gap: 35px; }
+  .hero-grid { grid-template-columns: minmax(0,1fr); }
   .hero h1 { font-size: clamp(3.2rem,6vw,5rem); }
   .trust-strip { grid-template-columns: repeat(3,1fr); }
   .trust-strip > img { display: none; }
@@ -290,7 +292,7 @@ img { display: block; max-width: 100%; }
   .hero { min-height: auto; padding: 120px 20px 70px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-video { height: 800px; }
-  .hero-overlay { background: linear-gradient(0deg,var(--navy) 30%,color-mix(in oklab, var(--navy) 56%, transparent) 100%); }
+  .hero-overlay { background: linear-gradient(0deg,color-mix(in oklab, var(--navy) 50%, transparent) 0%,color-mix(in oklab, var(--navy) 28%, transparent) 100%); }
   .hero-copy { padding-top: 30px; }
   .quote-form { width: min(570px,100%); }
   .scroll-cue { display: none; }
