@@ -302,7 +302,6 @@ function SitePage() {
                 </div>
                 <div className="hero-trust"><ShieldCheck size={20} /><span><strong>Travaux conformes et sécuritaires</strong><small>Maître électricien membre de la CMEQ</small></span></div>
               </div>
-              <QuoteForm />
             </div>
             <a className="scroll-cue" href="#confiance"><span /> Découvrir</a>
           </section>
@@ -406,8 +405,11 @@ function SitePage() {
           </section>
 
           <section className="final-cta" id="soumission">
-            <div className="final-cta-copy reveal"><span className="eyebrow eyebrow-light">Votre projet commence ici</span><h2>Besoin d’un maître électricien fiable?</h2><p>Parlez directement à Frank Mastro pour une intervention rapide ou une soumission claire.</p><div><a className="button button-light" href="tel:+15144972126"><Phone size={18} /> 514-497-2126</a><a className="button button-outline-light" href="mailto:frank.mastro@bell.net"><Mail size={18} /> Écrire un courriel</a></div></div>
-            <div className="emergency-card reveal"><span>Urgences électriques</span><strong>Disponible 24 h / 24, 7 j / 7</strong><a href="tel:+15144972096">514-497-2096 <ArrowRight /></a></div>
+            <div className="final-cta-details">
+              <div className="final-cta-copy reveal"><span className="eyebrow eyebrow-light">Votre projet commence ici</span><h2>Besoin d’un maître électricien fiable?</h2><p>Parlez directement à Frank Mastro pour une intervention rapide ou une soumission claire.</p><div><a className="button button-light" href="tel:+15144972126"><Phone size={18} /> 514-497-2126</a><a className="button button-outline-light" href="mailto:frank.mastro@bell.net"><Mail size={18} /> Écrire un courriel</a></div></div>
+              <div className="emergency-card reveal"><span>Urgences électriques</span><strong>Disponible 24 h / 24, 7 j / 7</strong><a href="tel:+15144972096">514-497-2096 <ArrowRight /></a></div>
+            </div>
+            <div className="final-quote reveal"><QuoteForm /></div>
           </section>
         </main>
 
