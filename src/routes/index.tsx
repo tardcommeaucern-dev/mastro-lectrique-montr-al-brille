@@ -29,10 +29,10 @@ import cmeqAsset from "@/assets/cmeq-logo-640w-smaller.png.asset.json";
 import repairAsset from "@/assets/electrician-working-house-repair-1920w.jpg.asset.json";
 import installAsset from "@/assets/electrician-working-house-repair-installation-1920w.jpg.asset.json";
 import truckAsset from "@/assets/frank-mastro-eletricien-company-truck-1920w.jpg.asset.json";
-import posterAsset from "@/assets/hero-poster.jpg.asset.json";
+import posterAsset from "@/assets/hero-poster-cropped.jpg";
 import introLogoAsset from "@/assets/logo.png.asset.json";
 import headerLogoAsset from "@/assets/logo_header-2.png.asset.json";
-import videoAsset from "@/assets/hero_video_1.mp4.asset.json";
+import videoAsset from "@/assets/hero-video-cropped.mp4.asset.json";
 
 const title = "Frank Mastro l’Électricien | Montréal et Rive-Sud";
 const description =

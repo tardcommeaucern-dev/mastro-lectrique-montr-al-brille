@@ -100,7 +100,7 @@ img { display: block; max-width: 100%; }
 
 .hero { position: relative; min-height: min(940px,100svh); display: grid; align-items: center; padding: 135px clamp(20px,5vw,90px) 68px; color: white; background: var(--navy); }
 .hero-video, .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero-video { object-fit: cover; transform: scale(1.08); object-position: center; }
+.hero-video { object-fit: cover; }
 .hero-overlay { background: linear-gradient(90deg, color-mix(in oklab, var(--navy) 48%, transparent) 0%, color-mix(in oklab, var(--navy) 40%, transparent) 46%, color-mix(in oklab, var(--navy) 25%, transparent) 100%), linear-gradient(0deg, color-mix(in oklab, var(--navy) 34%, transparent), transparent 50%); }
 .hero-grid { position: relative; z-index: 2; width: min(1400px,100%); margin: auto; display: grid; grid-template-columns: minmax(0,1fr); align-items: center; }
 .hero-copy { max-width: 760px; animation: hero-copy .8s .2s ease both; }
