@@ -77,18 +77,18 @@ img { display: block; max-width: 100%; }
 .intro-bolt-one { left: 24%; top: 5%; transform: rotate(19deg); animation: bolt 2s ease both; }
 .intro-bolt-two { right: 22%; bottom: 2%; transform: rotate(-154deg); animation: bolt 2s .13s ease both; }
 
-.site-header { position: absolute; z-index: 50; top: 0; left: 0; right: 0; height: 98px; display: grid; grid-template-columns: minmax(190px, 280px) minmax(0,1fr) auto; align-items: center; gap: 32px; padding: 0 clamp(20px,4vw,72px); border-bottom: 1px solid color-mix(in oklab, white 18%, transparent); color: white; }
+.site-header { position: absolute; z-index: 50; top: 0; left: 0; right: 0; height: 98px; display: grid; grid-template-columns: minmax(190px, 280px) minmax(0,1fr) auto; align-items: center; gap: 32px; padding: 0 clamp(20px,4vw,72px); background: white; border-bottom: 1px solid color-mix(in oklab, var(--navy) 12%, transparent); color: var(--navy); }
 .brand { width: min(100%, 230px); }
-.brand img { width: 100%; filter: brightness(0) invert(1); }
+.brand img { width: 100%; }
 .nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(18px,2.2vw,40px); font-size: .87rem; font-weight: 700; }
 .nav-links a { position: relative; padding: 10px 0; }
-.nav-links a::after { content: ""; position: absolute; bottom: 2px; left: 0; width: 100%; height: 2px; background: var(--electric-bright); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a::after { content: ""; position: absolute; bottom: 2px; left: 0; width: 100%; height: 2px; background: var(--electric); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
 .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
 .header-actions { display: flex; align-items: center; gap: 16px; }
 .emergency-link { display: flex; flex-direction: column; text-align: right; }
-.emergency-link span { color: var(--electric-bright); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.emergency-link span { color: var(--electric); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
 .emergency-link strong { font-size: .96rem; }
-.menu-button { display: none; align-items: center; justify-content: center; width: 43px; height: 43px; border: 1px solid color-mix(in oklab, white 30%, transparent); color: white; background: color-mix(in oklab, var(--navy) 60%, transparent); }
+.menu-button { display: none; align-items: center; justify-content: center; width: 43px; height: 43px; border: 1px solid color-mix(in oklab, var(--navy) 25%, transparent); color: var(--navy); background: transparent; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 22px; border: 1px solid transparent; border-radius: var(--radius); font-size: .88rem; font-weight: 800; cursor: pointer; transition: transform .22s, box-shadow .22s, background .22s; }
 .button:hover { transform: translateY(-2px); }
