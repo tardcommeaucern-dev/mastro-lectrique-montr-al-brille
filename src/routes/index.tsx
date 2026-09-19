@@ -287,7 +287,7 @@ function SitePage() {
 
         <main>
           <section className="hero" id="accueil">
-            <video className="hero-video" autoPlay muted loop playsInline poster={posterAsset.url} aria-label="Électricien Frank Mastro au travail">
+            <video className="hero-video" autoPlay muted loop playsInline poster={posterAsset} aria-label="Électricien Frank Mastro au travail">
               <source src={videoAsset.url} type="video/mp4" />
             </video>
             <div className="hero-overlay" />
