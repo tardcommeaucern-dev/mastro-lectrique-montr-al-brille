@@ -31,7 +31,7 @@ import installAsset from "@/assets/electrician-working-house-repair-installation
 import truckAsset from "@/assets/frank-mastro-eletricien-company-truck-1920w.jpg.asset.json";
 import posterAsset from "@/assets/hero-poster.jpg.asset.json";
 import introLogoAsset from "@/assets/logo.png.asset.json";
-import headerLogoAsset from "@/assets/logo_header.png.asset.json";
+import headerLogoAsset from "@/assets/logo_header-2.png.asset.json";
 import videoAsset from "@/assets/hero_video_1.mp4.asset.json";
 
 const title = "Frank Mastro l’Électricien | Montréal et Rive-Sud";
